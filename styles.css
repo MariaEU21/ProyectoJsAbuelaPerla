@@ -1,0 +1,685 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #D8DADC;
+    background-repeat: no-repeat; 
+}
+header h1 img{
+    width: 75%;
+    max-width: 700px;
+}
+
+header {
+    background-color:#161616;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+nav ul li a:hover{
+    color: #f5a623;
+}
+
+.container {
+    padding: 2rem;
+    display: grid;
+    place-content: center;
+    grid-template-columns: 1.5fr 1fr 0.5fr 0.5fr;
+    grid-auto-rows: 1fr;
+    gap: 10px;
+    height: 100vh;
+}
+.item {
+    border-radius: 1rem;
+    box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+.item:nth-child(1) {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    background: url('https://i.pinimg.com/564x/2d/b8/fb/2db8fb0232bb507e6789fd7f07d2d9fa.jpg') no-repeat center/cover;
+}
+
+.item:nth-child(2) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background: url('https://i.pinimg.com/564x/10/2b/ce/102bce00f453333768c3865fb926be93.jpg') no-repeat center/cover;
+}
+
+.item:nth-child(3) {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    background: url('https://i.pinimg.com/564x/16/64/f4/1664f453d0f0573102891340e00abadd.jpg') no-repeat center/cover;
+}
+
+.item:nth-child(4) {
+    grid-column: 4/5;
+    grid-row: 1/2;
+    background: url('https://i.pinimg.com/564x/71/af/58/71af58a629db17d76bf573e87c5a458a.jpg') no-repeat center/cover;
+}
+
+.item:nth-child(5) {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    background: url('https://i.pinimg.com/564x/89/ad/ea/89adea8bbece8d97bdd482f2a7b903fe.jpg') no-repeat center/cover;
+}
+
+.item:nth-child(6) {
+    grid-column: 2/3;
+    grid-row: 2/4;
+    background: url('https://i.pinimg.com/564x/df/28/f4/df28f426ee5d1edf513eb802cb5ccf31.jpg') no-repeat center/cover;
+}
+
+.item:nth-child(7) {
+    grid-column: 3/5;
+    grid-row: 2/3;
+    background: url('https://i.pinimg.com/564x/08/8f/88/088f888a1567ceee4c0a4e068efa65cc.jpg') no-repeat center/cover;
+}
+
+.item:nth-child(8) {
+    grid-column: 3/5;
+    grid-row: 3/4;
+    background: url('https://i.pinimg.com/564x/01/ac/ca/01accaeabb7562bd756f2c1d34f9c714.jpg') no-repeat center/cover;
+}
+.home {
+    position: relative;
+}
+
+/* Estilos para el enlace */
+.special-offer-link {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.special-offer-link:hover {
+    background-color: rgba(0, 0, 0, 0.8); 
+    transform: scale(1.05);
+}
+
+/* Animación de texto */
+.special-offer-link h2 {
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 464px) {
+
+    .container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .item:nth-child(even),
+    .item:nth-child(odd) {
+      grid-column: auto;
+      grid-row: auto;
+    }
+  
+  }
+  /* Tablet */
+  @media screen and (min-width: 465px) and (max-width: 768px) {
+  
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    
+    .item:nth-child(n) {
+      grid-column: auto;
+      grid-row: auto;
+    }
+  }
+  
+  
+
+/* Estilos para la ventana del menú desplegable */
+.mobile-menu-dropdown {
+    display: none; 
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 100%;
+    height: 250px;
+    text-align:end;
+    z-index: 2; 
+}
+
+.mobile-menu-dropdown ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mobile-menu-dropdown ul li {
+    margin: 10px 0;
+}
+.mobile-menu-dropdown ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+/* Estilos para mostrar la ventana del menú desplegable */
+.mobile-menu-dropdown.show-menu {
+    display: block;
+    margin-bottom: 50px;
+}
+
+
+/* Estilos específicos para cada sección (home, about, menu, contact) */
+section {
+    font-weight: bold;
+    margin: 20px;
+    color: black;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+#home img {
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+/* Estilos para los botones de filtro */
+.filter-buttons {
+    margin-bottom: 20px;
+}
+
+.filter-buttons button {
+    background-color: #f5a623;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.filter-buttons button:hover {
+    background-color: #d48e15;
+}
+
+/* Estilos para los productos */
+.products {
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 20px;
+}
+
+.product-card {
+    /* Otros estilos para la tarjeta de producto */
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    color: black;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover; 
+}
+
+.add-to-cart-button {
+    /* Estilos para el botón "Agregar al Carrito" */
+    background-color: #4CAF50; 
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button img {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+.add-to-cart-button:hover {
+    background-color: #45a049;
+}
+
+.product-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-weight: bold;
+    color: #f5a623;
+}
+
+/* Estilos para el carrito de compras (aside) */
+.cart-aside {
+    position: fixed;
+    top: 0;
+    right: -300px; 
+    width: 300px;
+    height: 100%;
+    background-color:white;
+    padding: 20px;
+    z-index: 1;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.cart-aside.open {
+    right: 0; 
+}
+
+.close-cart-button {
+    padding: 10px 20px;
+    margin-top: 50px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    background-color: rgba(0, 0, 0, 0); 
+    margin-left: auto; 
+}
+
+
+/* Estilos para el menú hamburguesa */
+.mobile-menu {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.mobile-menu .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #f5a623;
+    margin: 3px 0;
+    border-radius: 3px;
+}
+
+/* Media query para mostrar el icono del menú en versiones móviles */
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #f5a623;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul.show-menu {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Estilos para el carrito de compras en versión móvil */
+    .cart-aside {
+        display: none; 
+    }
+
+    .cart-aside.open {
+        display: block; 
+    }
+}
+.form {
+    text-align: left;
+    width: 100%; 
+    padding: 20px;
+    box-sizing: border-box;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+/* Estilos para el botón de enviar del formulario de contacto */
+.submit-button {
+    width: 200px;
+    background-color: #f5a623;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #d48e15;
+}
+
+
+
+/* Estilos para hacerlo responsivo */
+@media screen and (max-width: 600px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+
+/* Estilos para el pie de página */
+footer {
+    background-color:#161616;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Estilos para el carrito de compras en el encabezado */
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-items-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 12px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Estilos para el formulario de contacto */
+.contact-form label,
+.contact-form textarea {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form .error-message {
+    color: red;
+    margin-top: 5px;
+}
+
+.contact-form .success-message {
+    color: green;
+    margin-top: 5px;
+}
+
+/* Estilos para los productos en el carrito de compras */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.cart-item img {
+    max-width: 50px;
+    max-height: 50px;
+    margin-right: 10px;
+}
+
+.cart-item .product-info {
+    flex: 1;
+}
+
+.cart-item .product-title {
+    font-weight: bold;
+}
+
+.cart-item .product-price {
+    color: #f5a623;
+    font-weight: bold;
+}
+/* Estilo para el botón delete */
+.remove-from-cart {
+    border: none; 
+    background-color: transparent; 
+    cursor: pointer; 
+    padding: 10px; 
+}
+
+
+/* Estilos para el carrito de compras en versión móvil */
+.cart-aside {
+    display: none; 
+    background-color: white;
+}
+.cart-aside.open {
+    display: block; 
+}
+/* Estilos para el botón de menú hamburguesa */
+.mobile-menu {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute; 
+    right: 10px; 
+    top: 10px; 
+}
+
+.mobile-menu .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #f5a623;
+    margin: 3px 0;
+    border-radius: 3px;
+}
+/* Media query para mostrar el menú hamburguesa en versiones móviles */
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: flex;
+    }
+}
+
+/* Estilos para el texto con contorno */
+.texto-con-contorno {
+    font-size: 36px;
+    font-weight: bold;
+    color: #f5a623; 
+    -webkit-text-stroke: 2px #000000; 
+    text-stroke: 2px #000000; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para los elementos de información de contacto */
+.informacion-contacto p {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  /* Google Maps */
+  .google-maps {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    max-width: 100%; 
+    height: 0; 
+    padding-bottom: 75%; 
+    position: relative; 
+    overflow: hidden;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.5);
+  }
+  
+  .google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  
+  /* Estilos para los horarios de atención */
+  .horarios {
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Estilos para el título "Horarios de atención" */
+  .horarios h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para los elementos de la lista de horarios */
+  .horarios ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  /* Estilos para los elementos de la lista de horarios*/
+  .horarios li {
+    font-size: 24px;
+    color: #666;
+    margin-bottom: 5px;
+  }
+/*boton whtasapp*/
+
+.photo-container {
+    position: fixed;
+    top: 90%;
+    right: 10px;
+    transform: translateY(-50%);
+    z-index: 9999;
+    width: 80px;
+    height: 80px;
+    z-index: 9999;
+  }
+  
+  .photo-container img {
+    width: 75%;
+    height: 75%;
+    object-fit: cover;
+  }
+  .photo-container:hover {
+    width: 70px;
+    height: 70px;
+  
+  }
+
+  /* Estilos para el botón "Comprar" */
+#buy-button {
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin-right: 10px; 
+}
+
+#buy-button:hover {
+    background-color: #45a049; 
+}
+
+/* Estilos para el botón "Cargar más productos" */
+#load-more-button {
+    background-color: #008CBA; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+#load-more-button:hover {
+    background-color: #0077A3; 
+}
