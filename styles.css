@@ -1,6 +1,6 @@
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #D8DADC;
@@ -34,7 +34,13 @@ nav ul li a {
 nav ul li a:hover{
     color: #f5a623;
 }
-
+.title {
+        text-align: center; 
+        font-size: 34px; 
+        font-weight: bold; 
+        color: #333; 
+        
+}
 .container {
     padding: 2rem;
     display: grid;
@@ -164,9 +170,10 @@ nav ul li a:hover{
 
 /* Estilos para la ventana del menú desplegable */
 .mobile-menu-dropdown {
+    padding: 10px;
     display: none; 
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.9);
     position: absolute;
     top: 60px;
     right: 10px;
@@ -187,6 +194,7 @@ nav ul li a:hover{
 .mobile-menu-dropdown ul li a {
     text-decoration: none;
     color: white;
+    font-weight: bold ;
 }
 
 
@@ -561,15 +569,6 @@ footer {
     }
 }
 
-/* Estilos para el texto con contorno */
-.texto-con-contorno {
-    font-size: 36px;
-    font-weight: bold;
-    color: #f5a623; 
-    -webkit-text-stroke: 2px #000000; 
-    text-stroke: 2px #000000; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
 
 /* Estilos para los elementos de información de contacto */
 .informacion-contacto p {
@@ -602,7 +601,13 @@ footer {
     height: 100%;
     border: 0;
   }
-  
+  .contact {
+        border-radius: 10px;
+        padding: 5px;
+        margin-bottom: 20px;
+        text-align: center;
+        box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.5);
+    }
   /* Estilos para los horarios de atención */
   .horarios {
     border-radius: 10px;
