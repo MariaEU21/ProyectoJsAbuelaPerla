@@ -706,3 +706,6 @@ footer {
 #load-more-button:hover {
     background-color: #0077A3; 
 }
+.hidden {
+    display: none;
+}
