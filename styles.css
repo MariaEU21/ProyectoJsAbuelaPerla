@@ -328,10 +328,16 @@ section {
     font-weight: bold;
     color: #f5a623;
 }
-.cart-aside {
-    max-height: 400px; /* Ajusta la altura máxima según tus necesidades */
-    overflow-y: auto; /* Habilita el desplazamiento vertical si es necesario */
+
+.cart-container {
+    position: relative; 
+    max-height: 100vh; 
+    overflow: hidden; 
 }
+
+
+
+
 
 /* Estilos para el carrito de compras (aside) */
 .cart-aside {
@@ -345,6 +351,7 @@ section {
     z-index: 1;
     transition: right 0.3s ease-in-out;
     box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+    overflow-y: auto; 
 }
 
 .cart-aside.open {
@@ -360,7 +367,20 @@ section {
     background-color: rgba(0, 0, 0, 0); 
     margin-left: auto; 
 }
-
+/* Media query para pantallas de 320px a 768px */
+@media screen and (max-width: 768px) {
+    .cart-aside {
+        overflow-y: auto; 
+        position: fixed; 
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 70%; 
+        max-height: 653px; 
+        background-color: white; 
+        z-index: 1000; 
+    }
+}
 
 /* Estilos para el menú hamburguesa */
 .mobile-menu {
@@ -523,11 +543,12 @@ footer {
 
 /* Estilos para los productos en el carrito de compras */
 .cart-item {
-    display: flex;
-    justify-content: space-between;
+    display:flex;
+    justify-content:center;
     align-items: center;
     border-bottom: 1px solid #ddd;
     padding: 10px 0;
+    gap: 10px;
 }
 
 .cart-item img {
@@ -555,6 +576,7 @@ footer {
     cursor: pointer; 
     padding: 10px; 
 }
+
 
 
 /* Estilos para el carrito de compras en versión móvil */
@@ -658,6 +680,10 @@ footer {
     color: #333;
     margin-bottom: 5px;
   }
+
+
+
+
 /*boton whtasapp*/
 
 .photo-container {
@@ -698,20 +724,56 @@ footer {
     background-color: #45a049; 
 }
 
-/* Estilos para el botón "Cargar más productos" */
-#load-more-button {
-    background-color: #008CBA; 
-    color: white; 
-    padding: 10px 20px; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
 
-#load-more-button:hover {
-    background-color: #0077A3; 
-}
 .hidden {
     display: none;
+}
+/* Estilos generales para el formulario */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Estilos para las etiquetas */
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Estilos para los campos de entrada de texto */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Estilos para el botón de envío */
+button[type="submit"] {
+    background-color: #f5a623;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+button[type="submit"]:hover {
+    background-color: #d48e15;
+}
+
+/* Estilos para la alerta */
+#alerta {
+    display: block; 
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
 }
