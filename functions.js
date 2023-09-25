@@ -1,38 +1,38 @@
 // Datos de ejemplo para productos
 const productos = [
     // Empanadas
-    { id: 1, nombre: 'Empanada de carne', categoria: 'empanadas', precio: 300, descripcion: 'Deliciosa empanada de carne', imagen: 'img/empanadas-carne.jpg',  },
+    { id: 1, nombre: 'Empanada de carne', categoria: 'empanadas', precio: 300, descripcion: 'Deliciosa empanada de carne', imagen: 'img/empanadas-carne.jpg',oferta: true },
     { id: 2, nombre: 'Empanada de pollo', categoria: 'empanadas', precio: 300, descripcion: 'Riquísima empanada de pollo', imagen: 'img/epollo.jpg' },
     { id: 3, nombre: 'Empanada de jamón y queso', categoria: 'empanadas', precio: 300, descripcion: 'Sabrosa empanada de jamón y queso', imagen: 'img/empanadas-carne.jpg' },
     { id: 4, nombre: 'Empanada de verdura', categoria: 'empanadas', precio: 300, descripcion: 'Empanada vegetariana con verduras frescas', imagen: 'img/everduras.jpg' },
-    { id: 5, nombre: 'Empanada de choclo', categoria: 'empanadas', precio: 300, descripcion: 'Empanada rellena de choclo tierno', imagen: 'img/echoclo.jpg' },
+    { id: 5, nombre: 'Empanada de choclo', categoria: 'empanadas', precio: 300, descripcion: 'Empanada rellena de choclo tierno', imagen: 'img/echoclo.jpg', oferta: true },
     { id: 6, nombre: 'Empanada de cebolla', categoria: 'empanadas', precio: 300, descripcion: 'Empanada rellena de cebolla caramelizada', imagen: 'img/ecebolla.jpg' },
-    { id: 7, nombre: 'Empanada de pescado', categoria: 'empanadas', precio: 300, descripcion: 'Empanada de pescado fresco', imagen: 'img/epescado.jpg' },
+    { id: 7, nombre: 'Empanada de pescado', categoria: 'empanadas', precio: 300, descripcion: 'Empanada de pescado fresco', imagen: 'img/epescado.jpg', oferta: true },
     { id: 8, nombre: 'Empanada de champiñones', categoria: 'empanadas', precio: 300, descripcion: 'Empanada con relleno de champiñones', imagen: 'img/ehongos.jpg' },
     { id: 9, nombre: 'Empanada de atún', categoria: 'empanadas', precio: 300, descripcion: 'Empanada de atún en su jugo', imagen: 'img/eatun.jpg' },
     { id: 10, nombre: 'Empanada de salmón', categoria: 'empanadas', precio: 300, descripcion: 'Empanada de salmón ahumado', imagen: 'img/esalmon.jpg' },
 
     // Pizzas
-    { id: 11, nombre: 'Pizza Margarita', categoria: 'pizzas', precio: 1500, descripcion: 'Pizza con tomate, mozzarella y albahaca', imagen: 'img/pizza.jpg' },
+    { id: 11, nombre: 'Pizza Margarita', categoria: 'pizzas', precio: 1500, descripcion: 'Pizza con tomate, mozzarella y albahaca', imagen: 'img/pizza.jpg', oferta: true },
     { id: 12, nombre: 'Pizza Napolitana', categoria: 'pizzas', precio: 1800, descripcion: 'Pizza con tomate, mozzarella y anchoas', imagen: 'img/napolitana.jpg' },
-    { id: 13, nombre: 'Pizza BBQ', categoria: 'pizzas', precio: 1400, descripcion: 'Pizza con salsa barbacoa, pollo y cebolla', imagen: 'img/pizza.jpg' },
+    { id: 13, nombre: 'Pizza BBQ', categoria: 'pizzas', precio: 1400, descripcion: 'Pizza con salsa barbacoa, pollo y cebolla', imagen: 'img/pizza.jpg', oferta: true },
     { id: 14, nombre: 'Pizza Vegetariana', categoria: 'pizzas', precio: 1700, descripcion: 'Pizza con variedad de vegetales frescos', imagen: 'img/vegetariana.jpg' },
     { id: 15, nombre: 'Pizza Hawaiana', categoria: 'pizzas', precio: 1300, descripcion: 'Pizza con jamón y piña', imagen: 'img/hawaiana.jpg' },
-    { id: 16, nombre: 'Pizza Cuatro Quesos', categoria: 'pizzas', precio: 1850, descripcion: 'Pizza con cuatro tipos de queso', imagen: 'img/cuatroquesos.jpg' },
+    { id: 16, nombre: 'Pizza Cuatro Quesos', categoria: 'pizzas', precio: 1850, descripcion: 'Pizza con cuatro tipos de queso', imagen: 'img/cuatroquesos.jpg', Oferta: true },
     { id: 17, nombre: 'Pizza Pepperoni', categoria: 'pizzas', precio: 2000, descripcion: 'Pizza con pepperoni picante', imagen: 'img/pepperoni.jpg' },
     { id: 18, nombre: 'Pizza Calzone', categoria: 'pizzas', precio: 2500, descripcion: 'Pizza cerrada estilo calzone', imagen: 'img/calzone.jpg' },
-    { id: 19, nombre: 'Pizza Barbacoa', categoria: 'pizzas', precio: 1900, descripcion: 'Pizza con carne y salsa barbacoa', imagen: 'img/barbacoa.jpg' },
+    { id: 19, nombre: 'Pizza Barbacoa', categoria: 'pizzas', precio: 1900, descripcion: 'Pizza con carne y salsa barbacoa', imagen: 'img/barbacoa.jpg', oferta: true},
     { id: 20, nombre: 'Pizza Mexicana', categoria: 'pizzas', precio: 1950, descripcion: 'Pizza con jalapeños y guacamole', imagen: 'img/mexicana.jpg' },
 
     // Hamburguesas y Lomitos
-    { id: 21, nombre: 'Hamburguesa Clásica', categoria: 'hamburguesas', precio: 7.0, descripcion: 'Hamburguesa con carne, lechuga y tomate', imagen: 'img/hclasica.jpg' },
-    { id: 22, nombre: 'Hamburguesa BBQ', categoria: 'hamburguesas', precio: 8.0, descripcion: 'Hamburguesa con salsa barbacoa y cebolla', imagen: 'img/hbarbacoa.jpg' },
+    { id: 21, nombre: 'Hamburguesa Clásica', categoria: 'hamburguesas', precio: 7.0, descripcion: 'Hamburguesa con carne, lechuga y tomate', imagen: 'img/hclasica.jpg', oferta: true },
+    { id: 22, nombre: 'Hamburguesa BBQ', categoria: 'hamburguesas', precio: 8.0, descripcion: 'Hamburguesa con salsa barbacoa y cebolla', imagen: 'img/hbarbacoa.jpg', oferta: true },
     { id: 23, nombre: 'Hamburguesa Doble Queso', categoria: 'hamburguesas', precio: 8.5, descripcion: 'Hamburguesa doble con queso cheddar', imagen: 'img/hdobleq.jpg' },
-    { id: 24, nombre: 'Hamburguesa de Pollo', categoria: 'hamburguesas', precio: 7.5, descripcion: 'Hamburguesa de pollo empanizado', imagen: 'img/hpollo.jpg' },
+    { id: 24, nombre: 'Hamburguesa de Pollo', categoria: 'hamburguesas', precio: 7.5, descripcion: 'Hamburguesa de pollo empanizado', imagen: 'img/hpollo.jpg', oferta: true},
     { id: 25, nombre: 'Lomito Especial', categoria: 'lomitos', precio: 10.0, descripcion: 'Lomito con jamón, huevo y queso', imagen: 'img/lespecial.jpg' },
     { id: 26, nombre: 'Hamburguesa de Ternera', categoria: 'hamburguesas', precio: 7.5, descripcion: 'Hamburguesa de ternera con panceta', imagen: 'img/hternera.jpg' },
     { id: 27, nombre: 'Hamburguesa Vegetariana', categoria: 'hamburguesas', precio: 7.5, descripcion: 'Hamburguesa de garbanzos y vegetales', imagen: 'img/hvegetariana.jpg' },
-    { id: 28, nombre: 'Lomito de Ternera', categoria: 'lomitos', precio: 10.0, descripcion: 'Lomito de ternera tierna', imagen: 'img/lternera.jpg' },
+    { id: 28, nombre: 'Lomito de Ternera', categoria: 'lomitos', precio: 10.0, descripcion: 'Lomito de ternera tierna', imagen: 'img/lternera.jpg', oferta: true },
     { id: 29, nombre: 'Hamburguesa de Pavo', categoria: 'hamburguesas', precio: 7.5, descripcion: 'Hamburguesa de pavo con aguacate', imagen: 'img/hpavo.jpg' },
     { id: 30, nombre: 'Lomito de Pollo', categoria: 'lomitos', precio: 8.5, descripcion: 'Lomito de pollo a la parrilla', imagen: 'img/hpollo.jpg' }
 ];
