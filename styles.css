@@ -311,6 +311,7 @@ section {
     width: 20px;
     height: 20px;
     margin-left: 5px;
+    border-radius: 5px;
 }
 
 .add-to-cart-button:hover {
@@ -501,7 +502,7 @@ footer {
     position: absolute;
     top: -5px;
     right: -5px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #161616;
     color: #D8DADC;
     font-size: 12px;
     width: 12px;
