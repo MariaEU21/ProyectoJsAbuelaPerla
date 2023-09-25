@@ -13,7 +13,7 @@ header h1 img{
 
 header {
     background-color:#161616;
-    color: white;
+    color: #D8DADC;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -29,16 +29,17 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: #D8DADC;
 }
 nav ul li a:hover{
-    color: #f5a623;
+    color: #ff9f04;
 }
 .title {
         text-align: center; 
         font-size: 34px; 
         font-weight: bold; 
-        color: #333;
+        color: #ff9f04;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         
 }
 @keyframes bounce {
@@ -123,8 +124,8 @@ nav ul li a:hover{
     display: block;
     text-align: center;
     text-decoration: none;
-    color: white;
-    background-color: black;
+    color:#D8DADC;
+    background-color:#161616 ;
     padding: 15px 30px;
     border-radius: 10px;
     font-size: 24px;
@@ -205,7 +206,7 @@ nav ul li a:hover{
 }
 .mobile-menu-dropdown ul li a {
     text-decoration: none;
-    color: white;
+    color: #D8DADC;
     font-weight: bold ;
 }
 
@@ -239,7 +240,7 @@ section {
 }
 
 .filter-buttons button {
-    background-color: #f5a623;
+    background-color: #ff9f04;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -252,7 +253,8 @@ section {
 }
 
 .filter-buttons button:hover {
-    background-color: #d48e15;
+    background-color: #FFD400;
+    color:#333;
 }
 
 /* Estilos para los productos */
@@ -326,7 +328,7 @@ section {
 
 .product-price {
     font-weight: bold;
-    color: #f5a623;
+    color: #ff9f04;
 }
 
 .cart-container {
@@ -346,7 +348,7 @@ section {
     right: -300px; 
     width: 300px;
     height: 100%;
-    background-color:white;
+    background-color:#D8DADC;
     padding: 20px;
     z-index: 1;
     transition: right 0.3s ease-in-out;
@@ -377,7 +379,7 @@ section {
         bottom: 0;
         width: 70%; 
         max-height: 653px; 
-        background-color: white; 
+        background-color:#D8DADC; 
         z-index: 1000; 
     }
 }
@@ -392,7 +394,7 @@ section {
 .mobile-menu .bar {
     width: 30px;
     height: 3px;
-    background-color: #f5a623;
+    background-color: #ff9f04;
     margin: 3px 0;
     border-radius: 3px;
 }
@@ -406,7 +408,7 @@ section {
     nav ul {
         display: none;
         flex-direction: column;
-        background-color: #f5a623;
+        background-color: #ff9f04;
         position: absolute;
         top: 60px;
         right: 0;
@@ -456,7 +458,7 @@ textarea {
 /* Estilos para el botón de enviar del formulario de contacto */
 .submit-button {
     width: 200px;
-    background-color: #f5a623;
+    background-color: #ff9f04;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -468,7 +470,7 @@ textarea {
 }
 
 .submit-button:hover {
-    background-color: #d48e15;
+    background-color:  #FFD400;
 }
 
 
@@ -484,7 +486,7 @@ textarea {
 /* Estilos para el pie de página */
 footer {
     background-color:#161616;
-    color: white;
+    color: #D8DADC;
     text-align: center;
     padding: 10px 0;
 }
@@ -500,7 +502,7 @@ footer {
     top: -5px;
     right: -5px;
     background-color: rgba(0, 0, 0, 0.7);
-    color: white;
+    color: #D8DADC;
     font-size: 12px;
     width: 12px;
     height: 12px;
@@ -566,7 +568,7 @@ footer {
 }
 
 .cart-item .product-price {
-    color: #f5a623;
+    color: #ff9f04;
     font-weight: bold;
 }
 /* Estilo para el botón delete */
@@ -582,7 +584,7 @@ footer {
 /* Estilos para el carrito de compras en versión móvil */
 .cart-aside {
     display: none; 
-    background-color: white;
+    background-color: #D8DADC;
 }
 .cart-aside.open {
     display: block; 
@@ -600,7 +602,7 @@ footer {
 .mobile-menu .bar {
     width: 30px;
     height: 3px;
-    background-color: #f5a623;
+    background-color:#ff9f04;
     margin: 3px 0;
     border-radius: 3px;
 }
@@ -645,6 +647,7 @@ footer {
   }
   .contact {
         color: #333;
+        background-color: #f9f9f9;
         border-radius: 10px;
         padding: 5px;
         margin-bottom: 20px;
@@ -654,6 +657,7 @@ footer {
   /* Estilos para los horarios de atención */
   .horarios {
     color: #333;
+    background-color:#f9f9f9;
     border-radius: 10px;
     padding: 5px;
     margin-bottom: 20px;
@@ -754,8 +758,8 @@ textarea {
 
 /* Estilos para el botón de envío */
 button[type="submit"] {
-    background-color: #f5a623;
-    color: #fff;
+    background-color: #ff9f04;
+    color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -764,7 +768,8 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #d48e15;
+    background-color:  #FFD400;
+    color: #333;
 }
 
 /* Estilos para la alerta */
