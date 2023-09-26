@@ -187,6 +187,7 @@ nav ul li a:hover{
     display: none; 
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
     position: absolute;
     top: 50px;
     right: 10px;
@@ -354,6 +355,7 @@ section {
     z-index: 1;
     transition: right 0.3s ease-in-out;
     box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
     overflow-y: auto; 
 }
 
@@ -380,7 +382,7 @@ section {
         bottom: 0;
         width: 70%; 
         max-height: 653px; 
-        background-color:#D8DADC; 
+        background-color:#D8DADC;
         z-index: 1000; 
     }
 }
@@ -398,7 +400,9 @@ section {
     background-color: #ff9f04;
     margin: 3px 0;
     border-radius: 3px;
+    transition: transform 0.3s ease-in-out;
 }
+
 
 /* Media query para mostrar el icono del menú en versiones móviles */
 @media (max-width: 768px) {
@@ -549,7 +553,7 @@ footer {
     display:flex;
     justify-content:center;
     align-items: center;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #161616;
     padding: 10px 0;
     gap: 10px;
 }
@@ -585,7 +589,6 @@ footer {
 /* Estilos para el carrito de compras en versión móvil */
 .cart-aside {
     display: none; 
-    background-color: #D8DADC;
 }
 .cart-aside.open {
     display: block; 
