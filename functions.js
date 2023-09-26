@@ -15,9 +15,9 @@ const productos = [
     // Pizzas
     { id: 11, nombre: 'Pizza Margarita', categoria: 'pizzas', precio: 1500, descripcion: 'Pizza con tomate, mozzarella y albahaca', imagen: 'img/pizza.jpg', oferta: true },
     { id: 12, nombre: 'Pizza Napolitana', categoria: 'pizzas', precio: 1800, descripcion: 'Pizza con tomate, mozzarella y anchoas', imagen: 'img/napolitana.jpg' },
-    { id: 13, nombre: 'Pizza BBQ', categoria: 'pizzas', precio: 1400, descripcion: 'Pizza con salsa barbacoa, pollo y cebolla', imagen: 'img/pizza.jpg', oferta: true },
+    { id: 13, nombre: 'Pizza BBQ', categoria: 'pizzas', precio: 1400, descripcion: 'Pizza con salsa barbacoa, pollo y cebolla', imagen: 'img/pizza.jpg' },
     { id: 14, nombre: 'Pizza Vegetariana', categoria: 'pizzas', precio: 1700, descripcion: 'Pizza con variedad de vegetales frescos', imagen: 'img/vegetariana.jpg' },
-    { id: 15, nombre: 'Pizza Hawaiana', categoria: 'pizzas', precio: 1300, descripcion: 'Pizza con jamón y piña', imagen: 'img/hawaiana.jpg' },
+    { id: 15, nombre: 'Pizza Hawaiana', categoria: 'pizzas', precio: 1300, descripcion: 'Pizza con jamón y piña', imagen: 'img/hawaiana.jpg', oferta: true },
     { id: 16, nombre: 'Pizza Cuatro Quesos', categoria: 'pizzas', precio: 1850, descripcion: 'Pizza con cuatro tipos de queso', imagen: 'img/cuatroquesos.jpg', Oferta: true },
     { id: 17, nombre: 'Pizza Pepperoni', categoria: 'pizzas', precio: 2000, descripcion: 'Pizza con pepperoni picante', imagen: 'img/pepperoni.jpg' },
     { id: 18, nombre: 'Pizza Calzone', categoria: 'pizzas', precio: 2500, descripcion: 'Pizza cerrada estilo calzone', imagen: 'img/calzone.jpg' },
@@ -360,4 +360,38 @@ const mobileMenu = document.getElementById("mobile-menu");
 mobileMenu.addEventListener("click", () => {
     mobileMenu.classList.toggle("opened");
 });
+
+const bannerText = document.querySelector('.banner-text');
+const images = ['img/empanadas-carne.jpg', 'img/echoclo.jpg', 'img/epescado.jpg', 'img/pizza.jpg' , 'img/cuatroquesos.jpg' , 'img/barbacoa.jpg' ,'img/hawaiana.jpg' , 'img/hclasica.jpg' , 'img/hbarbacoa.jpg' , 'img/hpollo.jpg' , 'img/lternera.jpg' ]; 
+let currentIndex = 0;
+
+function changeBackground() {
+    bannerText.style.background = `url('${images[currentIndex]}') no-repeat center/cover`;
+    currentIndex = (currentIndex + 1) % images.length;
+}
+
+// Cambia la imagen cada 10 segundos
+setInterval(changeBackground, 10000);
+
+// Función para inicializar el carrusel
+function iniciarCarruselOfertas() {
+    const bannerText = document.querySelector('.banner-text');
+    const ofertaImages = productos.filter(producto => producto.oferta).map(producto => producto.imagen);
+    let currentIndex = 0;
+
+    function changeBackground() {
+        bannerText.style.background = `url('${ofertaImages[currentIndex]}') no-repeat center/cover`;
+        currentIndex = (currentIndex + 1) % ofertaImages.length;
+    }
+
+    // Cambia la imagen cada 10 segundos
+    setInterval(changeBackground, 5000);
+}
+
+// Llama a la función para inicializar el carrusel después de que la página se cargue completamente
+document.addEventListener('DOMContentLoaded', function () {
+    iniciarCarruselOfertas();
+});
+
+
 
