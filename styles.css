@@ -402,6 +402,17 @@ section {
     border-radius: 3px;
     transition: transform 0.3s ease-in-out;
 }
+.opened .bar:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.opened .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.opened .bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
 
 
 /* Media query para mostrar el icono del menú en versiones móviles */
@@ -494,6 +505,17 @@ footer {
     color: #D8DADC;
     text-align: center;
     padding: 10px 0;
+}
+
+/* Estilos para las imágenes de las redes sociales */
+.redes-sociales a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.redes-sociales a:hover {
+    transform: scale(1.1); /* Cambia el valor según lo grande que quieras que sea el efecto de agrandamiento */
 }
 
 /* Estilos para el carrito de compras en el encabezado */

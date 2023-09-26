@@ -355,8 +355,6 @@ function adjustCartContainerHeight() {
 }
 
 
-
-
 const mobileMenu = document.getElementById("mobile-menu");
 
 mobileMenu.addEventListener("click", () => {
